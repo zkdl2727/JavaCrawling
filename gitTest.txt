@@ -1,1 +1,2 @@
-git.
+gitDesktop
+ - 브랜치 새로 파서, push 연습.
