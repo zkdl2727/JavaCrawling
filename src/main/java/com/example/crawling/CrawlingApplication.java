@@ -142,6 +142,9 @@ public class CrawlingApplication {
 
 
 
+
+
+
        /* 이전 코드.
 
         final String url = "https://www.inflearn.com/courses/it-programming";
