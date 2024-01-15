@@ -24,7 +24,7 @@ public class CrawlingApplication {
     public static void main(String[] args) throws IOException {
 
         SpringApplication.run(CrawlingApplication.class, args);
-        try {
+       /* try {
             //개발 강의 전부 순회.
             for (int i = First; i <= Last; i++) {
                 final String infUrl = "http://www.inflearn.com/courses/it-programming?order=seq&page=" + i;
@@ -137,6 +137,7 @@ public class CrawlingApplication {
     }
     private static String getSessionCount(final String course) {
         return removeNum(course.substring(0,course.indexOf("개")));
+    }*/
     }
 }
 
