@@ -1,13 +1,11 @@
-package com.example.crawling;
+package com.example.crawling.kafkaTest1;
 
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.util.StringUtils;
 
 import java.util.Properties;
 import java.util.Scanner;
-import java.util.concurrent.ExecutionException;
 
 public class KafkaProducer {
     private static final String TOPIC_NAME = "kafkaTest1";
@@ -50,7 +48,7 @@ public class KafkaProducer {
 }
 
 
-/*      // 이전 코드
+/*      // 이전 코드 1
         String topic = "kafkaTest1";
         String key = "사용자1";
         String value = "this is a push notification";
