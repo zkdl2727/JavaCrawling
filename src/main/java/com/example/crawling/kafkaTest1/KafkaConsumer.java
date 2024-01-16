@@ -1,4 +1,4 @@
-package com.example.crawling;
+package com.example.crawling.kafkaTest1;
 
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
