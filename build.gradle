@@ -19,9 +19,16 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.jsoup:jsoup:1.14.3' // 크롤링
     implementation 'org.springframework.kafka:spring-kafka' // 카프카
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.3' // jackson 라이브러리
+    implementation 'com.google.firebase:firebase-admin:7.2.0' // firebase
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+// 재정의 api가 java에서 권장하지 않는 deprecated API를 사용하고 있다는것을 알려줌.
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:deprecation"
 }
