@@ -23,7 +23,9 @@ public class NotificationProducer {
 
         Payload payload = new Payload("zkdl6565@naver.com","새로운 메시지 발송");
 
-        producer.send(new ProducerRecord<>(TOPIC_NAME, payload.toJson()));
+        String chatRoomId = "chatroom1"; // 채팅방 id를 키로 사용하여 메시지 생성.
+
+        producer.send(new ProducerRecord<>(TOPIC_NAME, chatRoomId,payload.toJson())); // chatroomId를 통해 동일 파티션 할당 -> 메시지 순서 보장.
 
         producer.close();
     }
