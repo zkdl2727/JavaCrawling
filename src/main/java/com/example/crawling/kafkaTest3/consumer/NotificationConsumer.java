@@ -22,6 +22,7 @@ public class NotificationConsumer {
         properties.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         properties.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         properties.put("group.id", "NotificationGroup");
+        properties.put("max.poll.records","1"); // 한번에 하나의 메시지만 가져오도록 설정 추가. -> 메시지 순차 처리, 순서 보장.
 
 
         Consumer<String, String>  consumer = new KafkaConsumer<>(properties);
